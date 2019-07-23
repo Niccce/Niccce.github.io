@@ -45,7 +45,7 @@
     
     <title>
         
-            标签: links | 
+            《JavaScript-DOM编程艺术（第2版）》读书笔记 | 
         
         Secret garden
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="小雪糕的秘密fa园">
-    <meta name="keywords" content="林峯,Raymond Lam,Life">
+    <meta name="keywords" content="林峯,Raymond Lam,Life,汇总,学习">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -212,7 +212,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Secret garden">
-    <meta name="msapplication-starturl" content="https://niccce.github.io/tags/links/">
+    <meta name="msapplication-starturl" content="https://niccce.github.io/2019/06/30/《JavaScript-DOM编程艺术（第2版）》读书笔记/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Secret garden">
@@ -227,13 +227,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://niccce.github.io/tags/links/">
+    <meta property="og:url" content="https://niccce.github.io/2019/06/30/《JavaScript-DOM编程艺术（第2版）》读书笔记/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: links | Secret garden">
+    <meta property="og:title" content="《JavaScript-DOM编程艺术（第2版）》读书笔记 | Secret garden">
     <meta property="og:image" content="/img/iceCreamFavicon.png">
     <meta property="og:description" content="小雪糕的秘密fa园">
-    
+    <meta property="og:article:tag" content="汇总"> <meta property="og:article:tag" content="学习"> 
 
+    
+        <meta property="article:published_time" content="Sun Jun 30 2019 18:50:01 GMT+0800">
+        <meta property="article:modified_time" content="Tue Jul 23 2019 22:16:03 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -241,13 +244,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://niccce.github.io/tags/links/index.html" />
+        <link rel="canonical" href="https://niccce.github.io/2019/06/30/《JavaScript-DOM编程艺术（第2版）》读书笔记/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://niccce.github.io/2019/06/30/《JavaScript-DOM编程艺术（第2版）》读书笔记/index.html",
+    "headline": "《JavaScript-DOM编程艺术（第2版）》读书笔记",
+    "datePublished": "Sun Jun 30 2019 18:50:01 GMT+0800",
+    "dateModified": "Tue Jul 23 2019 22:16:03 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Niccce",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/Niccce.jpg"
+        },
+        "description": "<h3>小雪糕的秘密fa园</h3>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Secret garden",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/iceCreamFavicon.png"
+        }
+    },
+    "keywords": ",汇总,学习林峯,Raymond Lam,Life",
+    "description": "小雪糕的秘密fa园",
+}
+</script>
 
 
     
@@ -281,99 +314,281 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第1章-JavaScript简史"><span class="post-toc-number">1.</span> <span class="post-toc-text">第1章 JavaScript简史</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JavaScript的起源"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">JavaScript的起源</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第2章-JavaScript语法"><span class="post-toc-number">2.</span> <span class="post-toc-text">第2章 JavaScript语法</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第3章-DOM"><span class="post-toc-number">3.</span> <span class="post-toc-text">第3章 DOM</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第4章-案例研究：JavaScript图片库"><span class="post-toc-number">4.</span> <span class="post-toc-text">第4章 案例研究：JavaScript图片库</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第5章-最佳实践"><span class="post-toc-number">5.</span> <span class="post-toc-text">第5章 最佳实践</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第6章-案例研究：图片库改进版"><span class="post-toc-number">6.</span> <span class="post-toc-text">第6章 案例研究：图片库改进版</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第7章-动态创建标记"><span class="post-toc-number">7.</span> <span class="post-toc-text">第7章 动态创建标记</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第8章-充实文档的内容"><span class="post-toc-number">8.</span> <span class="post-toc-text">第8章 充实文档的内容</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第9章-CSS-DOM"><span class="post-toc-number">9.</span> <span class="post-toc-text">第9章 CSS-DOM</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第10章-用JavaScript实现动画效果"><span class="post-toc-number">10.</span> <span class="post-toc-text">第10章 用JavaScript实现动画效果</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第11章-HTML5"><span class="post-toc-number">11.</span> <span class="post-toc-text">第11章 HTML5</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第12章-综合示例"><span class="post-toc-number">12.</span> <span class="post-toc-text">第12章 综合示例</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 13 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/09/05/记录一些以后可能会查看的链接/">记录一些以后可能会查看的链接</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            前端学习资...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/09/05/记录一些以后可能会查看的链接/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/Niccce.jpg" width="44px" height="44px" alt="Niccce's avatar">
-            </div>
-            <div>
-                <strong>Niccce</strong>
-                <!--<span>9月 05, 2018</span>-->
-                <span>2018.09.05</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/汇总整理/">汇总整理</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 13 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                《JavaScript-DOM编程艺术（第2版）》读书笔记
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/Niccce.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <!--<strong>Niccce</strong>-->
+        <!--<span>6月 30, 2019</span>-->
+        <span>发表：2019.06.30</span>
+        <span>更新：2019.07.23</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADiklEQVR42u3aS45iQQwEQO5/6ZltSy2YTLsK0CjeCjXvV9GLpGw//jh+HA8EOHDgwIEDBw4cOHB8MccjPqJb/zozv8/Pb19/fnbP2Vpw4MCBA8cNjtki8/PzZc/4VmvBgQMHDhzXOF4HWB517eKTv0SRWa4FBw4cOHB8D8ezAMu3WEkcJs/CgQMHDhz/B8frImBSHJxtC9tQx4EDBw4cn+XIy3nJVio/Z0Pw4VopDhw4cOBYDzR8/+e3znfgwIEDB45fHO3RDsPlBb48VvPRvWhFOHDgwIHjKEceVMlVZwcRWoj8iThw4MCB4x5HPiKQB21bNGwLhftrceDAgQPHPY52fKEdiWsj8+wWcdV2woEDBw4cI47XjZz2dfMW0eZZG3QcOHDgwHGbIx9cyMcIZo2r2Vsl56/mO3DgwIEDx4ijbeq05cXZEN7sWQd2tDhw4MCB4xBHUhA8G43tRi4P+GQVOHDgwIHjHkfbzpkNLuShmBO0xDhw4MCB450c7XarHX1o20VnC5dPgxwHDhw4cFzgyMMvby+1155qX+WUOHDgwIHjBke7mFNBeGDrFeBGm1IcOHDgwHGNoy3SbYI22lytm0wRHA4cOHDgOMqRb9vyx9/YerVARYTjwIEDB47LHEVZLbh2NoKQ37mN4bpWigMHDhw4So6kJHdqNCH/dhO39fYSBw4cOHAc5WhjNSm65eMIm8UUjaW2OIgDBw4cONYcs+GDBLQt4W2gZ0N4OHDgwIHjLMepTdes2Ddb6izyh5ODOHDgwIFj0cHPy4L7eJs9fR/nxe8OHDhw4MCx4MhH39ptXj4Yt4/b4Ypw4MCBA8dRjllzqC0L5qXANlw3b4IDBw4cOG5w5GMEyZntWNvmHfLArrtwOHDgwIFjzdEOFrQBuQnddjuXrAgHDhw4cLyfYz80kEMk/4YN+j/CGwcOHDhwXOOYjaa1oHnQtk2v/K1w4MCBA8c9jvZoy39t9B4bU8g3jThw4MCB4yjHvqjXFubyLV8SlvnneqABBw4cOHAsOPJwncVqHtv5KEMetMOBBhw4cODAsebYjJ3NWkezFlf742AYtDhw4MCB40MceTMpv0N+t81PARw4cODA8W0c7WavbW7NwrvmxoEDBw4c1zj2Ude+UB7JCdkH2k44cODAgWM90NBGYN6CascaNq0mHDhw4MBxj8OBAwcOHDhw4MCBAweOLzv+AnnyAMnL164NAAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/学习/">学习</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/汇总/">汇总</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <!--<span id="busuanzi_value_page_pv"></span>&nbsp;浏览量-->
+                        浏览量：<span id="busuanzi_value_page_pv"></span>
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=《JavaScript-DOM编程艺术（第2版）》读书笔记&url=https://niccce.github.io/2019/06/30/《JavaScript-DOM编程艺术（第2版）》读书笔记/index.html&pic=https://niccce.github.io/img/iceCreamFavicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=《JavaScript-DOM编程艺术（第2版）》读书笔记&url=https://niccce.github.io/2019/06/30/《JavaScript-DOM编程艺术（第2版）》读书笔记/index.html&via=Niccce" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://niccce.github.io/2019/06/30/《JavaScript-DOM编程艺术（第2版）》读书笔记/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://niccce.github.io/2019/06/30/《JavaScript-DOM编程艺术（第2版）》读书笔记/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://niccce.github.io/2019/06/30/《JavaScript-DOM编程艺术（第2版）》读书笔记/index.html&title=《JavaScript-DOM编程艺术（第2版）》读书笔记" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Secret garden&title=《JavaScript-DOM编程艺术（第2版）》读书笔记&summary=小雪糕的秘密fa园&pics=https://niccce.github.io/img/iceCreamFavicon.png&url=https://niccce.github.io/2019/06/30/《JavaScript-DOM编程艺术（第2版）》读书笔记/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <ul>
+<li><b>前言</b><br>&emsp;&emsp;在深入学习前端以及了解这个行业的过程中，我渐渐意识到基础知识对个人发展、日后求职的重要性。由此，我在近期入手了网上推荐的一些前端书籍，希望借此巩固基础并加深学习。</li>
+</ul>
+<h1 id="第1章-JavaScript简史"><a href="#第1章-JavaScript简史" class="headerlink" title="第1章 JavaScript简史"></a>第1章 JavaScript简史</h1><h2 id="JavaScript的起源"><a href="#JavaScript的起源" class="headerlink" title="JavaScript的起源"></a>JavaScript的起源</h2><h1 id="第2章-JavaScript语法"><a href="#第2章-JavaScript语法" class="headerlink" title="第2章 JavaScript语法"></a>第2章 JavaScript语法</h1><h1 id="第3章-DOM"><a href="#第3章-DOM" class="headerlink" title="第3章 DOM"></a>第3章 DOM</h1><h1 id="第4章-案例研究：JavaScript图片库"><a href="#第4章-案例研究：JavaScript图片库" class="headerlink" title="第4章 案例研究：JavaScript图片库"></a>第4章 案例研究：JavaScript图片库</h1><h1 id="第5章-最佳实践"><a href="#第5章-最佳实践" class="headerlink" title="第5章 最佳实践"></a>第5章 最佳实践</h1><h1 id="第6章-案例研究：图片库改进版"><a href="#第6章-案例研究：图片库改进版" class="headerlink" title="第6章 案例研究：图片库改进版"></a>第6章 案例研究：图片库改进版</h1><h1 id="第7章-动态创建标记"><a href="#第7章-动态创建标记" class="headerlink" title="第7章 动态创建标记"></a>第7章 动态创建标记</h1><h1 id="第8章-充实文档的内容"><a href="#第8章-充实文档的内容" class="headerlink" title="第8章 充实文档的内容"></a>第8章 充实文档的内容</h1><h1 id="第9章-CSS-DOM"><a href="#第9章-CSS-DOM" class="headerlink" title="第9章 CSS-DOM"></a>第9章 CSS-DOM</h1><h1 id="第10章-用JavaScript实现动画效果"><a href="#第10章-用JavaScript实现动画效果" class="headerlink" title="第10章 用JavaScript实现动画效果"></a>第10章 用JavaScript实现动画效果</h1><h1 id="第11章-HTML5"><a href="#第11章-HTML5" class="headerlink" title="第11章 HTML5"></a>第11章 HTML5</h1><h1 id="第12章-综合示例"><a href="#第12章-综合示例" class="headerlink" title="第12章 综合示例"></a>第12章 综合示例</h1>
+        
+    
+
+    
+</div>
+
+
+   <div>
+   <br/>
+   <ul id="post-license" class="post-license">
+       <li class="post-license-author">
+           <strong>本文作者：</strong>
+           <a href="https://niccce.github.io">Niccce</a>
+       </li>
+
+       <li class="post-license-link">
+           <strong>本文链接：</strong>
+           <a href="https://niccce.github.io/2019/06/30/《JavaScript-DOM编程艺术（第2版）》读书笔记/">《JavaScript-DOM编程艺术（第2版）》读书笔记</a>
+       </li>
+
+       <li class="post-license-statement">
+           <strong>版权声明： </strong>
+           本文由 Niccce 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="license" target="_blank">署名-非商业性使用-相同方式共享（CC BY-NC-SA）4.0 国际许可协议</a>
+		   </br>转载请保留以上声明信息！
+       </li>
+   </ul>
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/06/01/头脑风暴小程序-开发总结/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -579,6 +794,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
