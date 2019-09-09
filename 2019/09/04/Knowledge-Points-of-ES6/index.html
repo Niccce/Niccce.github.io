@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            ES6知识点归纳 | 
+        
+        Secret garden
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/iceCreamFavicon.png">
+    <link rel="icon" href="/img/iceCreamFavicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="小雪糕的秘密fa园">
+    <meta name="keywords" content="林峯,Raymond Lam,Life,汇总,前端,ES6,ECMAScript 6">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?U9E9WBr2I8FiIu2wnY3row==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/bg.png);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Secret garden">
+    <meta name="msapplication-starturl" content="https://niccce.github.io/2019/09/04/Knowledge-Points-of-ES6/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Secret garden">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/iceCreamFavicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://niccce.github.io/2019/09/04/Knowledge-Points-of-ES6/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="ES6知识点归纳 | Secret garden">
+    <meta property="og:image" content="/img/iceCreamFavicon.png">
+    <meta property="og:description" content="小雪糕的秘密fa园">
+    <meta property="og:article:tag" content="汇总"> <meta property="og:article:tag" content="前端"> <meta property="og:article:tag" content="ES6"> <meta property="og:article:tag" content="ECMAScript 6"> 
+
+    
+        <meta property="article:published_time" content="Wed Sep 04 2019 14:38:00 GMT+0800">
+        <meta property="article:modified_time" content="Mon Sep 09 2019 14:42:32 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://niccce.github.io/2019/09/04/Knowledge-Points-of-ES6/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://niccce.github.io/2019/09/04/Knowledge-Points-of-ES6/index.html",
+    "headline": "ES6知识点归纳",
+    "datePublished": "Wed Sep 04 2019 14:38:00 GMT+0800",
+    "dateModified": "Mon Sep 09 2019 14:42:32 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Niccce",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/Niccce.jpg"
+        },
+        "description": "<h3>小雪糕的秘密fa园</h3>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Secret garden",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/iceCreamFavicon.png"
+        }
+    },
+    "keywords": ",汇总,前端,ES6,ECMAScript 6林峯,Raymond Lam,Life",
+    "description": "小雪糕的秘密fa园",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#var、let、const"><span class="post-toc-number">1.</span> <span class="post-toc-text">var、let、const</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#var"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">var</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#let"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">let</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#const"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">const</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三者如何选择"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">三者如何选择</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#箭头函数"><span class="post-toc-number">2.</span> <span class="post-toc-text">箭头函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#语法简明"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">语法简明</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#可以隐式返回"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">可以隐式返回</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#this"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">this</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#箭头函数的不适用场景"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">箭头函数的不适用场景</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#函数参数的默认值"><span class="post-toc-number">3.</span> <span class="post-toc-text">函数参数的默认值</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ES6-模版字符串"><span class="post-toc-number">4.</span> <span class="post-toc-text">ES6 模版字符串</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 13 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                ES6知识点归纳
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/Niccce.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <!--<strong>Niccce</strong>-->
+        <!--<span>9月 04, 2019</span>-->
+        <span>发表：2019.09.04</span>
+        <span>更新：2019.09.09</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACyklEQVR42u3aQW4jMQwEQP//07sPCLDuJu2sLZVOQYIZqSYHQmw+/ly5HtjY2NjY2NjY2NgfyX7E6+dTyXuiA8W7rM6MjY2NfTQ7OVZy6J9bzn7O35mfGRsbG/sGdnv05Kn82WSv2ZmxsbGxsf+NeccnyC9C2NjY2Ngbdt5Cat+2eQM2Njb2zez80O+IE9q//movDRsbG/vj2Tnjc37+1XwbGxsb+4PZ7cqLx+aDzvZ9cipsbGzsQ9mbhlFbeNpg4FXnxMbGxj6bXTRlFsM3SWC8DwCe/B4bGxv7SnY7gpMM97RXjrxEPdkXGxsb+2h2ftnYDN+0TaX2clIEvdjY2NgHsTet/Jydt6hetS82Njb2Pey8tdQ28ZMS2F5jNtEvNjY29qnsdqgxD3rbsHbW0iqaWdjY2NiHsvOYdlaQkiI0a1S18QM2Njb22eykIG3C12T4pi2cbesKGxsb+wb27ILRjvvsW07JP6PupWFjY2N/ObstEm1bf4ZpP9ywqYSNjY395ey82MyKXBvW5lFB/TmwsbGxj2bPMG1TacabxRj1yA42Njb217Lzh5PYddZgSt7WFkJsbGzs29htk2hPbcF5ER3m29jY2Nhfy35VsDocoymL1luaStjY2NjHsfOgd/b52pghjx+K4UtsbGzso9mbg+ZXmgQwC5vrVAQbGxv7OHYb5eaXkFlM28YJb6nb2NjY2F/C3peuPFSYjXu25RYbGxsbO79m5LDZR5ktbGxs7BvY7crj2OKSMGLkIQQ2Njb22exhMViXulnEO3sWGxsb+wb2PlKdjWy2rahkX2xsbOyb2Xnx2Bw9bzm1xXXVS8PGxsa+mN3GA3m7Kh8MiuJnbGxsbOxFiNteSNrW/38uYNjY2Ngfw56Fu8n4Totvi2V0ZmxsbOyj2W3jpr1yvKwIleM+2NjY2Dew71nY2NjY2NjY2NjYH7P+AnqHe+7o6eYrAAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/ECMAScript-6/">ECMAScript 6</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/ES6/">ES6</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/前端/">前端</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/汇总/">汇总</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <!--<span id="busuanzi_value_page_pv"></span>&nbsp;浏览量-->
+                        浏览量：<span id="busuanzi_value_page_pv"></span>
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ES6知识点归纳&url=https://niccce.github.io/2019/09/04/Knowledge-Points-of-ES6/index.html&pic=https://niccce.github.io/img/iceCreamFavicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=ES6知识点归纳&url=https://niccce.github.io/2019/09/04/Knowledge-Points-of-ES6/index.html&via=Niccce" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://niccce.github.io/2019/09/04/Knowledge-Points-of-ES6/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://niccce.github.io/2019/09/04/Knowledge-Points-of-ES6/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://niccce.github.io/2019/09/04/Knowledge-Points-of-ES6/index.html&title=ES6知识点归纳" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Secret garden&title=ES6知识点归纳&summary=小雪糕的秘密fa园&pics=https://niccce.github.io/img/iceCreamFavicon.png&url=https://niccce.github.io/2019/09/04/Knowledge-Points-of-ES6/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="var、let、const"><a href="#var、let、const" class="headerlink" title="var、let、const"></a>var、let、const</h1><h2 id="var"><a href="#var" class="headerlink" title="var"></a><code>var</code></h2><ol>
+<li>可以重复声明、可以重新赋值</li>
+<li>在函数中声明变量，则只能在函数中使用（var声明的变量的作用域属于Function Scope）</li>
+<li><p>用var在if语句的代码块中声明，因为没有函数，所以在if语句的代码块外也能访问</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hi</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> i = <span class="string">'hi'</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(i);     <span class="comment">//hi</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(i);         <span class="comment">//hi</span></span><br><span class="line">&#125;</span><br><span class="line">hi();</span><br><span class="line"><span class="built_in">console</span>.log(i);<span class="comment">//delete.html:26 Uncaught ReferenceError: i is not defined</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>存在变量提升，声明的语句会被提升到作用域最上方，赋值语句不被提升，留在原地</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(i);</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">1</span>;<span class="comment">//undefined</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//相当于</span></span><br><span class="line"><span class="comment">//var i;</span></span><br><span class="line"><span class="comment">//console.log(i);</span></span><br><span class="line"><span class="comment">//i=1;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>注意：</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);<span class="comment">//0 1 2 3 4,这行语句在for循环执行的时候立即执行</span></span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i);<span class="comment">//5 5 5 5 5 ,for循环结束后执行</span></span><br><span class="line">    &#125;,<span class="number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>解决方法就是改用let</li>
+</ul>
+<h2 id="let"><a href="#let" class="headerlink" title="let"></a><code>let</code></h2><ol>
+<li>不可以重复声明、可以重新赋值</li>
+<li>用let声明变量，只在代码块内可访问（let声明的变量的作用域属于block scope）<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> count = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">let</span> discount = <span class="number">0.9</span>;</span><br><span class="line"><span class="keyword">const</span> key = <span class="string">'abc'</span>;</span><br><span class="line"><span class="keyword">if</span> (count &gt; <span class="number">5</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> discount = <span class="number">0.5</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(discount);  <span class="comment">//0.5</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(discount);      <span class="comment">//0.9</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> count = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">let</span> count = <span class="number">1</span>;</span><br><span class="line"><span class="comment">// Uncaught SyntaxError: Identifier 'count' has already been declared</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>存在变量提升，但因为存在作用域死区（Temporal dead zone），但是若想在当前块级作用域中，这个变量声明之前引用这个变量，就会报错。<ul>
+<li>即<strong>在这个作用域开始直到这个变量声明之前，这个变量都处在临时性死区当中，这时引用它会报ReferenceError</strong></li>
+</ul>
+</li>
+</ol>
+<h2 id="const"><a href="#const" class="headerlink" title="const"></a><code>const</code></h2><ol>
+<li>不可以重复声明、不可以重新赋值</li>
+<li>用const声明时必须立刻赋值</li>
+<li>用const声明变量，只在代码块内可访问（属于block scope）<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> key = <span class="string">'123'</span>;</span><br><span class="line">key = <span class="string">'456'</span>;<span class="comment">//delete.html:19 Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> key;<span class="comment">//Uncaught SyntaxError: Missing initializer in const declaration</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> key = <span class="string">'123'</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(key);<span class="comment">//123</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(key);<span class="comment">//delete.html:22 Uncaught ReferenceError: key is not defined</span></span><br></pre></td></tr></table></figure>
+<p>注意：这样也是不可以的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> i = <span class="number">1</span>;<span class="comment">//Uncaught SyntaxError: Identifier 'i' has already been declared</span></span><br></pre></td></tr></table></figure></p>
+<ol start="3">
+<li>若用const声明时，给它的是一个对象，那么，对象的属性仍能改变，因为const指向的是对象的引用，这个引用不能变<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">    name: <span class="string">'Alred'</span>,</span><br><span class="line">    age: <span class="number">30</span></span><br><span class="line">&#125;;</span><br><span class="line">person = &#123;</span><br><span class="line">    name: <span class="string">'Alfred'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//delete.html:22 Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">        name: <span class="string">'Alred'</span>,</span><br><span class="line">        age: <span class="number">30</span></span><br><span class="line">    &#125;;</span><br><span class="line">person.age = <span class="number">20</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person);<span class="comment">//正常输出且不报错，其中age为20</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>也可以这样赋值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> abc = &#123;</span><br><span class="line">    name: <span class="string">'Raymond'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> person2 = abc;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>若希望对象的属性值也不修改的话，可以使用Object.freeze()方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">    name: <span class="string">'Alred'</span>,</span><br><span class="line">    age: <span class="number">30</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">Object</span>.freeze(person);  <span class="comment">//不允许改变对象的属性值</span></span><br><span class="line">person.age = <span class="number">20</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.age); <span class="comment">//30</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="4">
+<li>存在变量提升，也存在作用域死区（和let一样）</li>
+</ol>
+<h2 id="三者如何选择"><a href="#三者如何选择" class="headerlink" title="三者如何选择"></a>三者如何选择</h2><ul>
+<li>默认使用 const</li>
+<li>当变量需要重新绑定或更新的时候使用 let</li>
+<li>在ES6中尽量不适用 var</li>
+</ul>
+<h1 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h1><h2 id="语法简明"><a href="#语法简明" class="headerlink" title="语法简明"></a>语法简明</h2><ul>
+<li>没有参数<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    () =&gt; &#123; ... &#125; <span class="comment">// 没有参数</span></span><br><span class="line">     x =&gt; &#123; ... &#125; <span class="comment">// 一个参数，括号可加可不加(x)=&gt;&#123;...&#125;</span></span><br><span class="line">(x, y) =&gt; &#123; ... &#125; <span class="comment">// 多个参数</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">const</span> double = numbers.map(<span class="function"><span class="keyword">function</span>(<span class="params">number</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> number * <span class="number">2</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> double2 = numbers.map(<span class="function">(<span class="params">number</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> number * <span class="number">2</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(double); <span class="comment">// [2, 4, 6, 8, 10]</span></span><br><span class="line"><span class="built_in">console</span>.log(double2); <span class="comment">// [2, 4, 6, 8, 10]</span></span><br></pre></td></tr></table></figure>
+<h2 id="可以隐式返回"><a href="#可以隐式返回" class="headerlink" title="可以隐式返回"></a>可以隐式返回</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x =&gt; &#123; <span class="keyword">return</span> x * x &#125;  <span class="comment">// 语句块</span></span><br><span class="line">x =&gt; x * x  <span class="comment">// 表达式，和上一行作用相同</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">const</span> double = numbers.map(<span class="function">(<span class="params">number</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> number * <span class="number">2</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">const</span> double2 = numbers.map(<span class="function">(<span class="params">number</span>) =&gt;</span> number * <span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(double); <span class="comment">// [2, 4, 6, 8, 10]</span></span><br><span class="line"><span class="built_in">console</span>.log(double2); <span class="comment">// [2, 4, 6, 8, 10]</span></span><br></pre></td></tr></table></figure>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><ol>
+<li>箭头函数没有自己的this值，它的this是继承它的父作用域的（即上层作用域）</li>
+<li>箭头函数在指定的时候this已经确定，一般情况下不会因为调用而改变，不过会随上层作用域的this的变化而变化</li>
+</ol>
+<ul>
+<li>先看一个例子<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Alfred = &#123;</span><br><span class="line">    name: <span class="string">'Alfred'</span>,</span><br><span class="line">    hobbies: [<span class="string">'singing'</span>, <span class="string">'dancing'</span>, <span class="string">'composeing'</span>],</span><br><span class="line">    printHobbies: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">        <span class="keyword">this</span>.hobbies.map(<span class="function"><span class="keyword">function</span>(<span class="params">hobby</span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">//window</span></span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span> loves <span class="subst">$&#123;hobby&#125;</span>`</span>); <span class="comment">//输出内容都缺了Alfred</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Alfred.printHobbies();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>调用Alfred中的printHobbies()，第一个this指向Alfred，然后printHobbies里的那个函数，是map方法的一个回调函数，这个方法是独立运行的，因此这个方法指向的是window</p>
+<ul>
+<li>解决方法<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Alfred = &#123;</span><br><span class="line">    name: <span class="string">'Alfred'</span>,</span><br><span class="line">    hobbies: [<span class="string">'singing'</span>, <span class="string">'dancing'</span>, <span class="string">'composeing'</span>],</span><br><span class="line">    printHobbies: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> _this = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">this</span>.hobbies.map(<span class="function"><span class="keyword">function</span>(<span class="params">hobby</span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>); </span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;_this.name&#125;</span> loves <span class="subst">$&#123;hobby&#125;</span>`</span>); </span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Alfred.printHobbies();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>或者，使用箭头函数<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Alfred = &#123;</span><br><span class="line">    name: <span class="string">'Alfred'</span>,</span><br><span class="line">    hobbies: [<span class="string">'singing'</span>, <span class="string">'dancing'</span>, <span class="string">'composeing'</span>],</span><br><span class="line">    printHobbies: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.hobbies.map(<span class="function"><span class="params">hobby</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span> loves <span class="subst">$&#123;hobby&#125;</span>`</span>); </span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Alfred.printHobbies();</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>另外：由于箭头函数是匿名函数，所以一般会把函数赋值给一个变量<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> greet = <span class="function"><span class="params">name</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name);</span><br><span class="line">&#125;;</span><br><span class="line">greet(<span class="string">'Alfred'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="箭头函数的不适用场景"><a href="#箭头函数的不适用场景" class="headerlink" title="箭头函数的不适用场景"></a>箭头函数的不适用场景</h2><ol>
+<li><p>不能作为构造函数，不能用于定义对象方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// const person = (name, points) =&gt; &#123;       //Uncaught TypeError: person is not a constructor</span></span><br><span class="line"><span class="keyword">const</span> person = <span class="function"><span class="keyword">function</span>(<span class="params">name, points</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.points = points;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> Alfred = <span class="keyword">new</span> person(<span class="string">'Alfred'</span>, <span class="number">30</span>);</span><br><span class="line"><span class="comment">// person.prototype.updatePoints = () =&gt; &#123;</span></span><br><span class="line"><span class="comment">//     console.log(this);//Window，因为箭头函数不会绑定this，但是方法又需要绑定到对象上，因此不能用</span></span><br><span class="line"><span class="comment">//     this.points--;</span></span><br><span class="line"><span class="comment">//     console.log(this.points);</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// Alfred.updatePoints(); //NaN</span></span><br><span class="line">person.prototype.updatePoints = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">//person</span></span><br><span class="line">    <span class="keyword">this</span>.points--;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.points);</span><br><span class="line">&#125;</span><br><span class="line">Alfred.updatePoints(); <span class="comment">//29</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>真的需要用到this的时候不能使用箭头函数</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span> <span class="attr">style</span>=<span class="string">"width: 50px ; height: 50px; background-color: #000000;"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> app = <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>);</span><br><span class="line"><span class="comment">// app.addEventListener('click', () =&gt; &#123;</span></span><br><span class="line">app.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">//此处的方法需要绑定到app上，但是用箭头函数是不会进行绑定的</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">//Window</span></span><br><span class="line">    <span class="keyword">this</span>.style.height = <span class="string">'100px'</span>;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="comment">//此处希望this仍然指向app，使用箭头函数可以使this与外层保持一致</span></span><br><span class="line">        <span class="keyword">this</span>.style.height = <span class="string">'50px'</span>;</span><br><span class="line">    &#125;, <span class="number">500</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><strong>需要使用arguments对象</strong>时不能使用箭头函数<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// sum函数返回所有参数的和</span></span><br><span class="line"><span class="comment">// const sum = () =&gt; &#123;</span></span><br><span class="line"><span class="comment">//     return Array.from(arguments).reduce((preSum, value) =&gt; preSum + value, 0)</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// sum(1, 2, 3); //delete.html:19 Uncaught ReferenceError: arguments is not defined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="built_in">arguments</span>).reduce(<span class="function">(<span class="params">preSum, value</span>) =&gt;</span> preSum + value, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)); <span class="comment">//6</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="函数参数的默认值"><a href="#函数参数的默认值" class="headerlink" title="函数参数的默认值"></a>函数参数的默认值</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">multiply</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    a = a || <span class="number">5</span>;</span><br><span class="line">    b = b || <span class="number">3</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(a * b);</span><br><span class="line">&#125;</span><br><span class="line">multiply(); <span class="comment">//15，均使用了默认值</span></span><br><span class="line">multiply(<span class="number">2</span>, <span class="number">3</span>); <span class="comment">//6，使用了参数的值</span></span><br><span class="line">multiply(<span class="number">1</span>); <span class="comment">//3，b使用了默认值</span></span><br><span class="line">multiply(<span class="literal">undefined</span>, <span class="number">2</span>); <span class="comment">//10，a使用了默认值</span></span><br></pre></td></tr></table></figure>
+<p>用ES6可以简化为<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">multiply</span>(<span class="params">a = <span class="number">5</span>, b = <span class="number">3</span></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a * b);</span><br><span class="line">&#125;</span><br><span class="line">multiply(); <span class="comment">//15，均使用了默认值</span></span><br><span class="line">multiply(<span class="number">2</span>, <span class="number">3</span>); <span class="comment">//6，使用了参数的值</span></span><br><span class="line">multiply(<span class="number">1</span>); <span class="comment">//3，b使用了默认值</span></span><br><span class="line">multiply(<span class="literal">undefined</span>, <span class="number">2</span>); <span class="comment">//10，a使用了默认值，不能是multiply(, 2);必须要指明前面的参数</span></span><br><span class="line">multiply(<span class="literal">null</span>, <span class="number">2</span>); <span class="comment">//0，不会使用默认值</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>如果有传参，则使用传进来的值，如果没有传值，函数默认传的是undefined，if(typeof a === undefined),就会使用默认值</li>
+</ul>
+<h1 id="ES6-模版字符串"><a href="#ES6-模版字符串" class="headerlink" title="ES6 模版字符串"></a>ES6 模版字符串</h1><ul>
+<li>用反引号”`”来定义字符串</li>
+<li>用<code>${}</code>来引用变量，也可以放表达式、对象的属性、函数</li>
+<li>直接使用反引号可以保存html代码的层级结构，不需要用\或数组去模拟</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = <span class="string">'Alfred'</span>;</span><br><span class="line"><span class="keyword">const</span> age = <span class="number">30</span>;</span><br><span class="line"><span class="keyword">const</span> sentence = person + <span class="string">' is '</span> + age + <span class="string">' years old'</span>; <span class="comment">//es5</span></span><br><span class="line"><span class="keyword">const</span> sentence2 = <span class="string">`<span class="subst">$&#123;person&#125;</span> is <span class="subst">$&#123;age * <span class="number">2</span>&#125;</span> years old`</span>; <span class="comment">//es6</span></span><br><span class="line"><span class="keyword">const</span> template = <span class="string">`</span></span><br><span class="line"><span class="string">&lt;div&gt;</span></span><br><span class="line"><span class="string">    &lt;p&gt;Hello&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">`</span>.trim();</span><br><span class="line"><span class="built_in">console</span>.log(sentence);</span><br><span class="line"><span class="built_in">console</span>.log(sentence2);</span><br><span class="line"><span class="built_in">console</span>.log(template);</span><br></pre></td></tr></table></figure>
+<p>参考书籍：<a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">http://es6.ruanyifeng.com/</a><br>参考视频：<a href="https://www.bilibili.com/video/av47304735" target="_blank" rel="noopener">https://www.bilibili.com/video/av47304735</a></p>
+
+        
+    
+
+    
+</div>
+
+
+   <div>
+   <br/>
+   <ul id="post-license" class="post-license">
+       <li class="post-license-author">
+           <strong>本文作者：</strong>
+           <a href="https://niccce.github.io">Niccce</a>
+       </li>
+
+       <li class="post-license-link">
+           <strong>本文链接：</strong>
+           <a href="https://niccce.github.io/2019/09/04/Knowledge-Points-of-ES6/">https://niccce.github.io/2019/09/04/Knowledge-Points-of-ES6/</a>
+           <!-- <a href="https://niccce.github.io/2019/09/04/Knowledge-Points-of-ES6/">ES6知识点归纳</a> -->
+       </li>
+
+       <li class="post-license-statement">
+           <strong>版权声明： </strong>
+           本文由 Niccce 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="license" target="_blank">署名-非商业性使用-相同方式共享（CC BY-NC-SA）4.0 国际许可协议</a>
+		   </br>转载请保留以上声明信息！
+       </li>
+   </ul>
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/08/27/quick-to-learn-Webpack4-x/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/Niccce.jpg" alt="Niccce's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        Welcome to my secret garden!
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:niccce@foxmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/essay/">essay<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/学习汇总/">学习汇总<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/汇总整理/">汇总整理<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/读书笔记/">读书笔记<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">local_offer</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="Timeline">
+                
+                    <i class="material-icons sidebar-material-icons">send</i>
+                
+                Timeline
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/myWorks" title="我的作品集">
+                
+                    <i class="material-icons sidebar-material-icons">book</i>
+                
+                我的作品集
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友情链接">
+                
+                    <i class="material-icons sidebar-material-icons">person_add</i>
+                
+                友情链接
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/aboutMe" title="About Me">
+                
+                    <i class="material-icons sidebar-material-icons">account_box</i>
+                
+                About Me
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="https://weibo.com/u/2583021730" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+        <a href="https://www.instagram.com/niccce1208/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-instagram">
+                <span class="visuallyhidden">Instagram</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/Niccce" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/11197209/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2018&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Secret garden
+            
+                <br>
+                
+                    Keep Calm and Smile On
+                
+            
+        </div>
+
+
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+		-->
+
+
+		<div class="mdl-mini-footer--right-section">
+            <div>
+                <!--<span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span>人次</span>-->
+                <div class="footer-develop-div">Powered by Hexo</div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
