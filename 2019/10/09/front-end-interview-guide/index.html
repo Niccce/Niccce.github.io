@@ -45,7 +45,7 @@
     
     <title>
         
-            归档: 2019/6 | 
+            前端面试指南 | 
         
         Secret garden
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="小雪糕的秘密fa园">
-    <meta name="keywords" content="林峯,Raymond Lam,Life">
+    <meta name="keywords" content="林峯,Raymond Lam,Life,前端,面试">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -212,7 +212,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Secret garden">
-    <meta name="msapplication-starturl" content="https://niccce.github.io/archives/2019/06/">
+    <meta name="msapplication-starturl" content="https://niccce.github.io/2019/10/09/front-end-interview-guide/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Secret garden">
@@ -227,13 +227,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://niccce.github.io/archives/2019/06/">
+    <meta property="og:url" content="https://niccce.github.io/2019/10/09/front-end-interview-guide/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2019/6 | Secret garden">
+    <meta property="og:title" content="前端面试指南 | Secret garden">
     <meta property="og:image" content="/img/iceCreamFavicon.png">
     <meta property="og:description" content="小雪糕的秘密fa园">
-    
+    <meta property="og:article:tag" content="前端"> <meta property="og:article:tag" content="面试"> 
 
+    
+        <meta property="article:published_time" content="Wed Oct 09 2019 08:58:13 GMT+0800">
+        <meta property="article:modified_time" content="Wed Oct 09 2019 09:17:31 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -241,13 +244,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://niccce.github.io/archives/2019/06/index.html" />
+        <link rel="canonical" href="https://niccce.github.io/2019/10/09/front-end-interview-guide/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://niccce.github.io/2019/10/09/front-end-interview-guide/index.html",
+    "headline": "前端面试指南",
+    "datePublished": "Wed Oct 09 2019 08:58:13 GMT+0800",
+    "dateModified": "Wed Oct 09 2019 09:17:31 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Niccce",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/Niccce.jpg"
+        },
+        "description": "<h3>小雪糕的秘密fa园</h3>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Secret garden",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/iceCreamFavicon.png"
+        }
+    },
+    "keywords": ",前端,面试林峯,Raymond Lam,Life",
+    "description": "小雪糕的秘密fa园",
+}
+</script>
 
 
     
@@ -281,161 +314,307 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HTML"><span class="post-toc-number">1.</span> <span class="post-toc-text">HTML</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CSS"><span class="post-toc-number">2.</span> <span class="post-toc-text">CSS</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JavaScript"><span class="post-toc-number">3.</span> <span class="post-toc-text">JavaScript</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ES6"><span class="post-toc-number">4.</span> <span class="post-toc-text">ES6</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#流行框架"><span class="post-toc-number">5.</span> <span class="post-toc-text">流行框架</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#计算机基础"><span class="post-toc-number">6.</span> <span class="post-toc-text">计算机基础</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#计算机网络"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">计算机网络</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#操作系统"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">操作系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据库"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">数据库</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#数据结构和算法"><span class="post-toc-number">7.</span> <span class="post-toc-text">数据结构和算法</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 13 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/06/30/JavaScript_DOM_Programming_Art(2nd_Edition)/">《JavaScript-DOM编程艺术（第2版）》读书笔记</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            前言&emsp;&emsp;在深入学习前端以及了解这个行业的过程中，我渐渐意识到基础知识对个人发展、日后求...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/06/30/JavaScript_DOM_Programming_Art(2nd_Edition)/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/Niccce.jpg" width="44px" height="44px" alt="Niccce's avatar">
-            </div>
-            <div>
-                <strong>Niccce</strong>
-                <!--<span>6月 30, 2019</span>-->
-                <span>2019.06.30</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/读书笔记/">读书笔记</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/06/01/Brainstorming_miniprogram-Development_Summary/">头脑风暴小程序-开发总结</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            前言
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/06/01/Brainstorming_miniprogram-Development_Summary/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/Niccce.jpg" width="44px" height="44px" alt="Niccce's avatar">
-            </div>
-            <div>
-                <strong>Niccce</strong>
-                <!--<span>6月 01, 2019</span>-->
-                <span>2019.06.01</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/汇总整理/">汇总整理</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 13 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                前端面试指南
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/Niccce.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <!--<strong>Niccce</strong>-->
+        <!--<span>10月 09, 2019</span>-->
+        <span>发表：2019.10.09</span>
+        <span>更新：2019.10.09</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACyklEQVR42u3aQXLjMAwEwPz/07sP2IozAyhbKrJ1csWyhaYPCDH8+nPl9YWNjY2NjY2NjY39SvZXfP3wpaNPffcN3727qRkbGxv7bHZS0B75b+ktaVUzNjY29gXs5DFtc/pcbv6szT3Y2NjY2LNHtk2o2FRgY2NjYz/awPIx0GZj87q+jY2Njf1K9mwY9LnE5C+fa0i+7ddnadjY2NivZ+eh6Xte/9d8GxsbG/vF7PZqR0izBW2bXFQ5NjY29qHsdqyfbAny8VCylPs6sbGxsc9mb8qdbR5yWH64J6oTGxsb+1B2MppPIoFk+ZLPzn6MKLTAxsbGPpSdFJoU3Ta8fPmeCoOxsbGxb2D/Rhgwo+YtcBX0YmNjYx/Hzkc2+cYgebcdY82iX2xsbOwb2JvBUNRCRrBNs8TGxsa+gd0eiGwb0gPDoFGzjIJebGxs7OPYybZkEyTMDlMmd0YbIWxsbOxD2bNItd2QPBv6tq0OGxsb+wb2BpkHxm0k0D69nqVhY2NjH8GeDWvyd/dhbdsUv3VhY2NjH83eDJKGsetDR4KKhcDGxsY+lN22pTbWbcf9+5aJjY2NfRu7LTofHn2+f9M487aKjY2NfQN7s2GI4tV4xN9Gue2hTGxsbOxT2XnU2j54HwDk9URLjI2NjX00ux305Pe0C9ouVhFOY2NjYx/Nzo/I5KOlvCHl9axiDGxsbOwL2PsS20i4DXpbPDY2Nvad7M0xnfz1bFFWC4eNjY19KLu9csA+vm3HWz9Ujo2NjX0oe/bI2VGeJIR4qjUWQS82Njb2Eey2aeX3PBU/5A0MGxsb+2b2U4+fxQab0VKyLcHGxsbGjv7dL0f2eSvdbFGwsbGxsWdbgrZ1rUb/ySAMGxsb+wL2rLXMQt9ZQ/p8/w9xMjY2NvbR7McGN6NDPEUT2myTsLGxsQ9l33NhY2NjY2NjY2Njv+b6Cy5nmt0p2abkAAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/前端/">前端</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/面试/">面试</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <!--<span id="busuanzi_value_page_pv"></span>&nbsp;浏览量-->
+                        浏览量：<span id="busuanzi_value_page_pv"></span>
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=前端面试指南&url=https://niccce.github.io/2019/10/09/front-end-interview-guide/index.html&pic=https://niccce.github.io/img/iceCreamFavicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=前端面试指南&url=https://niccce.github.io/2019/10/09/front-end-interview-guide/index.html&via=Niccce" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://niccce.github.io/2019/10/09/front-end-interview-guide/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://niccce.github.io/2019/10/09/front-end-interview-guide/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://niccce.github.io/2019/10/09/front-end-interview-guide/index.html&title=前端面试指南" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Secret garden&title=前端面试指南&summary=小雪糕的秘密fa园&pics=https://niccce.github.io/img/iceCreamFavicon.png&url=https://niccce.github.io/2019/10/09/front-end-interview-guide/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><a href="https://loaln.github.io/2019/07/18/interview-1/" target="_blank" rel="noopener">https://loaln.github.io/2019/07/18/interview-1/</a></p>
+<p><a href="http://blog.lagabu.com/post/interview/netbase.html#%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B" target="_blank" rel="noopener">http://blog.lagabu.com/post/interview/netbase.html#%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B</a></p>
+<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><h1 id="流行框架"><a href="#流行框架" class="headerlink" title="流行框架"></a>流行框架</h1><h1 id="计算机基础"><a href="#计算机基础" class="headerlink" title="计算机基础"></a>计算机基础</h1><h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><p>计算机网络的知识点包括http、https、浏览器的重排重绘、tcp三次握手四次挥手等</p>
+<p>#进程和线程<br>进程：是并发执行的程序在执行过程中分配和管理资源的单位<br>线程：进程执行流的最小单元，是进程的一部分。一个没有进程的线程被看作单线程，是CPU调度的基本单位</p>
+<p>#进程间通信的方法<br>消息队列<br>管道<br>共享内存<br>信号量<br>套接字<br>信号</p>
+<p>#线程同步的方法<br>同步方法<br>同步块<br>wait和notify<br>volatile<br>Lock: ReentrantLock<br>局部变量<br>blockqueue</p>
+<p>#OSI七层结构<br>应用层：文件传输协议(http、smtp、ftp)<br>表示层<br>会话层：建立或者解除会话<br>传输层：TCP、UDP<br>网络层：IP、ICMP<br>数据链路层：传输有地址的帧<br>物理层</p>
+<p>#TCP和UDP<br>tcp是面向连接的，udp是无连接的<br>tcp是提供可靠连接的，通过tcp传输的数据无差错、不丢失、不重复且按序到达；udp尽最大努力交付，不保证可靠交付。<br>tcp面向字节流的，udp面向报文<br>tcp首部有20个字节，udp首部仅8字节<br>tcp支持1对1连接，udp支持1对1、1对多</p>
+<p>#三次握手和四次挥手<br>三次握手之所以三次是要保证client和server均让对方知道自己接收和发送的能力没有问题而保证的最小次数。为保证这种能力，每次握手都会携带一个seq标识，接收方接收到后设置ack=seq+1，并置ACK=1</p>
+<p>C=&gt;S server只能判断client具备发送能力<br>S=&gt;C client判断出server具有接收和发布能力<br>C=&gt;S 双方均保证接收和发送能力没问题</p>
+<p>#跨域的方法<br>JSONP：动态创建script标签并带上请求接口发送跨域请求，只能用get方法<br>CORS：后端设置Access-allow-origin-control=’*’即可<br>postMessage<br>iframe+document.domain</p>
+<p>#重排和重绘<br>引起重排重绘的时机：</p>
+<p>添加或删除可见DOM元素<br>元素位置发生变化<br>元素尺寸发生变化<br>内容发生变化，如文本被图片替代<br>窗口尺寸变化<br>页面渲染时<br>重排一定会引起重绘，重绘不一定引起重排</p>
+<p>#重排(回流)<br>生成渲染树后需要计算节点在设备视口(viewport)中的确切位置和大小，这个计算阶段就是回流。</p>
+<p>#重绘<br>通过回流阶段知道可视节点和可视节点具体的位置和大小后，需要将每个节点转换为屏幕上的实际像素，这个阶段叫做重绘。</p>
+<p>#优化方法<br>批量修改DOM<br>避免触发同步布局事件<br>对于复杂动画效果，使用绝对定位脱离文档流<br>css3硬件加速</p>
+<p>#http和https<br>http: http是超文本传输协议，是互联网上应用最广泛的一种网络协议，是一个客户端和服务器请求和应答的标准。</p>
+<p>https: 是以安全为目标的http协议，加入了SSL层，以SSL安全协议为基础。建立信息安全通道来确保数据传输并确保网站真实性。</p>
+<p>#http和https的区别<br>http是明文传输未加密通信的，网景公司设置了SSL协议对http协议传输的内容进行加密，并进行身份认证，比http协议安全性能高。</p>
+<p>https协议使用ca证书，费用较高<br>http明文传输，https使用ssl协议加密<br>链接方式不同，端口也不同，http是80端口、https是443端口<br>http连接简单无状态、https加密传输、身份认证</p>
+<p>#工作原理<br>客户端给出协议版本号、一个随机生成的数、客户端支持的加密方法给服务端<br>服务端确认使用的加密方法，并给出数字证书ca以及服务器生成的随机数<br>客户端确认证书有效，生成新的随机数，并使用证书中的公钥加密随机数并发给服务端<br>服务端使用自己的私钥解密随机数<br>客户端与服务端根据约定的加密方法，使用前面三个随机数生成会话密钥，用来加密接下来的整个会话流程</p>
+<p>#http1.0、http1.1、http2.0的区别</p>
+<p>#http1.0<br>无状态：服务器不跟踪不记录请求过的状态<br>无连接：浏览器每次请求都需要建立tcp连接</p>
+<p>#http1.1<br>长连接：新增Connection字段，可以设置keep-alive值保持连接不断开<br>管道化：基于长连接的基础，管道化可以不等第一个请求响应继续发送后面的内容，但响应的顺序还是按请求的顺序返回<br>缓存处理：增加cache-control字段<br>断点传输：上传/下载的资源过大时分割为多个部分分别上传/下载</p>
+<p>#http2.0<br>二进制分帧：将所有传输信息分割为更小的消息和帧，并用二进制形式编码<br>多路复用：共享TCP链接的基础上同时发送请求和响应，同一域名下的所有访问都由同一个TCP连接中走，http消息被分解为独立的帧，乱序发送，服务端根据标识符和首部将消息重新组装<br>头部压缩<br>服务推送：服务器可以额外向客户端推送资源而无需客户端明确请求</p>
+<p>#从url输入到显示页面的过程<br>查看浏览器缓存中是否有url对应的ip记录，没有会依次从系统缓存-&gt;路由器缓存-&gt;DNS服务器中找<br>根据ip和端口构造http请求并封入tcp包中<br>经过传输层、网络层、数据链路层、物理层到达服务器<br>服务器解析请求并返回响应和html给浏览器<br>浏览器根据html构建DOM树，遇到JS脚本和外部JS连接会阻塞并执行脚本<br>如遇到style标签或者link标签(先下载后构建)时根据外部样式、内部样式、内联样式构建CSSOM树并不影响DOM树构建<br>DOM树与CSSOM树合并为渲染树<br>进行回流(Layout)得到节点的几何信息<br>进行重绘(Painting)根据渲染树和回流得到的信息得到节点的绝对像素<br>将像素发送给GPU展示在页面上</p>
+<p>#HTTP缓存机制<br>浏览器在第一次发送请求后，服务器会在响应头中添加与缓存相关的字段：last-modified、expires、cache-control、ETag、Date</p>
+<p>强缓存: 直接从本机获取缓存，不需要向服务器发送请求<br>协商缓存: 浏览器发送请求给服务器，服务器判断是否可使用本地缓存</p>
+<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h1 id="数据结构和算法"><a href="#数据结构和算法" class="headerlink" title="数据结构和算法"></a>数据结构和算法</h1>
+        
+    
+
+    
+</div>
+
+
+   <div>
+   <br/>
+   <ul id="post-license" class="post-license">
+       <li class="post-license-author">
+           <strong>本文作者：</strong>
+           <a href="https://niccce.github.io">Niccce</a>
+       </li>
+
+       <li class="post-license-link">
+           <strong>本文链接：</strong>
+           <a href="https://niccce.github.io/2019/10/09/front-end-interview-guide/">https://niccce.github.io/2019/10/09/front-end-interview-guide/</a>
+           <!-- <a href="https://niccce.github.io/2019/10/09/front-end-interview-guide/">前端面试指南</a> -->
+       </li>
+
+       <li class="post-license-statement">
+           <strong>版权声明： </strong>
+           本文由 Niccce 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="license" target="_blank">署名-非商业性使用-相同方式共享（CC BY-NC-SA）4.0 国际许可协议</a>
+		   </br>转载请保留以上声明信息！
+       </li>
+   </ul>
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/09/04/Knowledge-Points-of-ES6/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
