@@ -83,10 +83,6 @@
 	        
 				<li><a href="/archives/" >归档</a></li>
 	        
-				<li><a href="/resume/" >我的简介</a></li>
-	        
-				<li><a href="/myWorks/" >我的作品</a></li>
-	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -100,7 +96,7 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			<a q-on="click: openSlider(e, 'myWorks')" href="javascript:void(0)">作品集</a>
     			
             
 		</nav>
@@ -163,10 +159,6 @@
 			
 				
 			
-				
-			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -187,15 +179,11 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 20%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/">分类</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories/">分类</a></li>
 		        
-					<li style="width: 20%"><a href="/archives/">归档</a></li>
-		        
-					<li style="width: 20%"><a href="/resume/">我的简介</a></li>
-		        
-					<li style="width: 20%"><a href="/myWorks/">我的作品</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives/">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -392,7 +380,7 @@
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'myWorks')"><a href="javascript:void(0)" q-class="active:myWorks">作品集</a></li>
       
         
     </ul>
@@ -433,14 +421,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">学习</a>
               </li>
              
@@ -453,11 +433,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面经</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面经</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -466,6 +450,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ECMAScript 6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
             <div class="clearfix"></div>
@@ -540,12 +528,79 @@
     
 
     
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-        
+
+    
+    	<section class="tools-section tools-section-friends" q-show="myWorks">
+  		
+        <ul class="search-ul">
           
-  	  		<div class="aboutme-wrap" id="aboutme">小小前端爱好者<br>在校大学生<br>欢迎大家多来交流学习^^</div>
-  	  	
+            <li class="search-li">
+              <a href="https://github.com/Niccce/E-Learning-system" target="_blank" class="search-title" title="一个使用 Vue.js+Node.js(express)+MySQL+Webpack 打造的基于 Web 的“在线学习系统”">
+                
+                  <i class="icon-link icon"></i>
+                
+                2019.10 - 至今 在线学习系统
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://github.com/Niccce/brainStormingMiniProgram" target="_blank" class="search-title" title="参考通过头脑风暴得出思维导图的思路，在微信小程序中采用多人协作完成头脑风暴环节，并生成思维导图的工具类小程序。">
+                
+                  <i class="icon-link icon"></i>
+                
+                2019.04-2019.05 脑暴
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://dmt-1257068932.cos-website.ap-guangzhou.myqcloud.com/" target="_blank" class="search-title" title="此为大二暑假期间，为了让即将入学的 18 级新生更加了解本专业，帮助他们及早确定个人学习方向，与工作室成员共同打造的专业网站">
+                
+                  <i class="icon-link icon"></i>
+                
+                2018.08 数字媒体技术专业网站
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://niccce.github.io/Digital-Museum/" target="_blank" class="search-title" title="互联网+的小分队的项目，涉及three.js">
+                
+                  <i class="icon-link icon"></i>
+                
+                2018.07 鱼湾苏维埃政府旧址-数字博物馆
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://niccce.github.io/JavaScript-Learning/modifushi/" target="_blank" class="search-title" title="基于 Bootstrap 框架开发的网站">
+                
+                  <i class="icon-link icon"></i>
+                
+                2018.07 魔笛服饰网站
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://niccce.github.io/SilkRoadWeb/" target="_blank" class="search-title" title="基于jQuery、利用 jQuery 插件进行开发的展示网页">
+                
+                  <i class="icon-link icon"></i>
+                
+                2017.10-2017.12 丝绸之路沿线建筑特色展示网页
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://free.modao.cc/app/94cfb3eeb60965114021c627b960274f4941805d#screen=s095f1940a58339531876e2" target="_blank" class="search-title" title="交互设计项目，对于服装搭配“没衣服搭、不会搭、嫌麻烦”等痛点，我们致力于设计一款新型服装搭配方案推荐的软件应用，解决用户日常的服饰搭配烦恼以及实体衣服搭配不便等问题。">
+                
+                  <i class="icon-link icon"></i>
+                
+                2018.10-2018.12 识穿
+              </a>
+            </li>
+          
+        </ul>
+  		
     	</section>
+    
     
   </div>
   
